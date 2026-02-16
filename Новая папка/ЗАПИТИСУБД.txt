@@ -1,0 +1,203 @@
+------------------------------------------------------------------------------------------------------------
+
+-- Таблиця постачальників
+CREATE TABLE Postachalnyky (
+    id_postachalnyka INT PRIMARY KEY,
+    nazva VARCHAR(100) NOT NULL
+);
+
+-- Таблиця виробників
+CREATE TABLE Vyrobnyky (
+    id_vyrobnyka INT PRIMARY KEY,
+    nazva VARCHAR(100) NOT NULL,
+    kraina VARCHAR(50),
+    povna_adresa VARCHAR(255)
+);
+
+-- Таблиця категорій
+CREATE TABLE Kategoriyi (
+    id_kategoriyi INT PRIMARY KEY,
+    nazva VARCHAR(100) NOT NULL
+);
+
+-- Таблиця товарів
+CREATE TABLE Tovary (
+    id_tovaru INT PRIMARY KEY,
+    nazva VARCHAR(150) NOT NULL,
+    id_kategoriyi INT REFERENCES Kategoriyi(id_kategoriyi),
+    id_vyrobnyka INT REFERENCES Vyrobnyky(id_vyrobnyka)
+);
+
+-- Таблиця поставок (прибуття товару)
+CREATE TABLE Postavky (
+    id_postavky INT PRIMARY KEY,
+    id_tovaru INT REFERENCES Tovary(id_tovaru),
+    id_postachalnyka INT REFERENCES Postachalnyky(id_postachalnyka),
+    data_postavky DATE,
+    kilkist INT,
+    tsina_za_odynytsyu DECIMAL(10,2),
+    zagalna_vartist DECIMAL(12,2)
+);
+
+-- Таблиця продажів
+CREATE TABLE Prodazhi (
+    id_prodazhu INT PRIMARY KEY,
+    id_tovaru INT REFERENCES Tovary(id_tovaru),
+    data_prodazhu DATE,
+    kilkist INT,
+    tsina_prodazhu DECIMAL(10,2),
+    zagalna_vartist DECIMAL(12,2)
+);
+
+------------------------------------------------------------------------------------------------------------
+
+INNER JOIN запити
+
+-- Назви та категорії товарів, постачальниками є лише ТОВ "Паньки" або ТОВ "Які люди"
+
+SELECT 
+    t.nazva AS nazva_tovaru,
+    k.nazva AS kategoriia,
+    p.nazva AS postachalnyk
+FROM Tovary t
+JOIN Postavky pst ON t.id_tovaru = pst.id_tovaru
+JOIN Postachalnyky p ON pst.id_postachalnyka = p.id_postachalnyka
+JOIN Kategoriyi k ON t.id_kategoriyi = k.id_kategoriyi
+WHERE p.nazva IN ('ТОВ "Паньки"', 'ТОВ "Які люди"');
+
+-- Усі товари, виробник яких не містить літер А, К, М, і категорія не "Крупи"
+
+SELECT 
+    t.nazva AS nazva_tovaru,
+    k.nazva AS kategoriia,
+    v.nazva AS vyrobnyk
+FROM Tovary t
+JOIN Vyrobnyky v ON t.id_vyrobnyka = v.id_vyrobnyka
+JOIN Kategoriyi k ON t.id_kategoriyi = k.id_kategoriyi
+WHERE v.nazva NOT LIKE '%[АКМ]%'
+  AND k.nazva <> 'Крупи';
+
+-- Товари + постачальник + країна виробника
+-- Умови: країна НЕ Україна, Молдова, Польща; ціна поставки < 50 грн; дата поставки з 10.02.2025 по сьогодні
+
+SELECT 
+    t.nazva AS nazva_tovaru,
+    p.nazva AS postachalnyk,
+    v.kraina AS kraina_vyrobnyka,
+    pst.data_postavky,
+    pst.tsina_za_odynytsyu
+FROM Tovary t
+JOIN Postavky pst ON t.id_tovaru = pst.id_tovaru
+JOIN Postachalnyky p ON pst.id_postachalnyka = p.id_postachalnyka
+JOIN Vyrobnyky v ON t.id_vyrobnyka = v.id_vyrobnyka
+WHERE v.kraina NOT IN ('Україна', 'Молдова', 'Польща')
+  AND pst.tsina_za_odynytsyu < 50
+  AND pst.data_postavky BETWEEN '2025-02-10' AND CURRENT_DATE;
+
+-- Кондитерські та безалкогольні товари, продані більше 100 (одиниць сумарно)
+
+SELECT 
+    t.nazva AS nazva_tovaru,
+    k.nazva AS kategoriia,
+    v.nazva AS vyrobnyk,
+    SUM(pr.kilkist) AS prodano_odynyts
+FROM Tovary t
+JOIN Kategoriyi k ON t.id_kategoriyi = k.id_kategoriyi
+JOIN Vyrobnyky v ON t.id_vyrobnyka = v.id_vyrobnyka
+JOIN Prodazhi pr ON t.id_tovaru = pr.id_tovaru
+WHERE k.nazva IN ('Кондитерські', 'Безалкогольні напої')
+GROUP BY t.id_tovaru, t.nazva, k.nazva, v.nazva
+HAVING SUM(pr.kilkist) > 100;
+
+-- Топ-3 товари за загальною вартістю поставок (з 10.02.2025)
+
+SELECT 
+    t.nazva AS nazva_tovaru,
+    p.nazva AS postachalnyk,
+    k.nazva AS kategoriia,
+    SUM(pst.zagalna_vartist) AS zagalna_vartist_postavok
+FROM Tovary t
+JOIN Postavky pst ON t.id_tovaru = pst.id_tovaru
+JOIN Postachalnyky p ON pst.id_postachalnyka = p.id_postachalnyka
+JOIN Kategoriyi k ON t.id_kategoriyi = k.id_kategoriyi
+WHERE pst.data_postavky >= '2025-02-10'
+GROUP BY t.id_tovaru, p.id_postachalnyka, k.id_kategoriyi
+ORDER BY zagalna_vartist_postavok DESC
+LIMIT 3;
+
+-- Товари + виробник + повна адреса + дата продажу + загальна вартість продажу
+-- Умова: тільки виробники, у яких є два з цих значень у колонці povna_adresa (прикладно)
+
+SELECT 
+    t.nazva AS nazva_tovaru,
+    v.nazva AS vyrobnyk,
+    v.povna_adresa,
+    k.nazva AS kategoriia,
+    pr.data_prodazhu,
+    pr.zagalna_vartist
+FROM Tovary t
+JOIN Vyrobnyky v ON t.id_vyrobnyka = v.id_vyrobnyka
+JOIN Kategoriyi k ON t.id_kategoriyi = k.id_kategoriyi
+JOIN Prodazhi pr ON t.id_tovaru = pr.id_tovaru
+WHERE v.povna_adresa LIKE '%, %'
+ORDER BY pr.zagalna_vartist DESC;
+
+------------------------------------------------------------------------------------------------------------
+
+OUTER JOIN запити
+
+-- Товари та їх виробники + виробники, у яких немає товарів
+
+SELECT 
+    t.nazva AS nazva_tovaru,
+    v.nazva AS vyrobnyk
+FROM Tovary t
+RIGHT JOIN Vyrobnyky v ON t.id_vyrobnyka = v.id_vyrobnyka;
+
+-- Категорії, до яких не належить жоден товар
+
+SELECT k.nazva AS kategoriia
+FROM Kategoriyi k
+LEFT JOIN Tovary t ON k.id_kategoriyi = t.id_kategoriyi
+WHERE t.id_tovaru IS NULL;
+
+-- Товари + дати поставок + постачальники (включаючи постачальників, які нічого не поставили)
+
+SELECT 
+    t.nazva AS nazva_tovaru,
+    pst.data_postavky,
+    p.nazva AS postachalnyk
+FROM Tovary t
+FULL OUTER JOIN Postavky pst ON t.id_tovaru = pst.id_tovaru
+FULL OUTER JOIN Postachalnyky p ON pst.id_postachalnyka = p.id_postachalnyka;
+
+-- Категорії, де немає товарів фірми ТОВ "Іл-Ок" (EXCEPT)
+
+SELECT k.nazva
+FROM Kategoriyi k
+WHERE k.id_kategoriyi NOT IN (
+    SELECT DISTINCT t.id_kategoriyi
+    FROM Tovary t
+    JOIN Vyrobnyky v ON t.id_vyrobnyka = v.id_vyrobnyka
+    WHERE v.nazva = 'ТОВ "Іл-Ок"'
+);
+
+SELECT k.nazva FROM Kategoriyi k
+EXCEPT
+SELECT k.nazva 
+FROM Kategoriyi k
+JOIN Tovary t ON k.id_kategoriyi = t.id_kategoriyi
+JOIN Vyrobnyky v ON t.id_vyrobnyka = v.id_vyrobnyka
+WHERE v.nazva = 'ТОВ "Іл-Ок"';
+
+-- Виробники, які не випускають продукцію молочної категорії (EXCEPT)
+
+SELECT v.nazva
+FROM Vyrobnyky v
+WHERE v.id_vyrobnyka NOT IN (
+    SELECT DISTINCT t.id_vyrobnyka
+    FROM Tovary t
+    JOIN Kategoriyi k ON t.id_kategoriyi = k.id_kategoriyi
+    WHERE k.nazva = 'Молочні'
+);
+------------------------------------------------------------------------------------------------------------
