@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "o2Quh+QHwAA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\ConsoleSystem1\\ConsoleSystem1\\ConsoleSystem1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\nunit\\4.5.0\\nunit.4.5.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\serilog\\4.3.1\\serilog.4.3.1.nupkg.sha512"
+  ],
+  "logs": []
+}
