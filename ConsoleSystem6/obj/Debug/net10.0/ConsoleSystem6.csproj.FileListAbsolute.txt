@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\ConsoleSystem6\bin\Debug\net10.0\ConsoleSystem6.exe
+C:\Users\Admin\source\repos\ConsoleSystem6\bin\Debug\net10.0\ConsoleSystem6.deps.json
+C:\Users\Admin\source\repos\ConsoleSystem6\bin\Debug\net10.0\ConsoleSystem6.runtimeconfig.json
+C:\Users\Admin\source\repos\ConsoleSystem6\bin\Debug\net10.0\ConsoleSystem6.dll
+C:\Users\Admin\source\repos\ConsoleSystem6\bin\Debug\net10.0\ConsoleSystem6.pdb
+C:\Users\Admin\source\repos\ConsoleSystem6\obj\Debug\net10.0\ConsoleSystem6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\ConsoleSystem6\obj\Debug\net10.0\ConsoleSystem6.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\ConsoleSystem6\obj\Debug\net10.0\ConsoleSystem6.AssemblyInfo.cs
+C:\Users\Admin\source\repos\ConsoleSystem6\obj\Debug\net10.0\ConsoleSystem6.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\ConsoleSystem6\obj\Debug\net10.0\ConsoleSystem6.dll
+C:\Users\Admin\source\repos\ConsoleSystem6\obj\Debug\net10.0\refint\ConsoleSystem6.dll
+C:\Users\Admin\source\repos\ConsoleSystem6\obj\Debug\net10.0\ConsoleSystem6.pdb
+C:\Users\Admin\source\repos\ConsoleSystem6\obj\Debug\net10.0\ConsoleSystem6.genruntimeconfig.cache
+C:\Users\Admin\source\repos\ConsoleSystem6\obj\Debug\net10.0\ref\ConsoleSystem6.dll
