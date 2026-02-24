@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\ConsoleSystem4\bin\Debug\net10.0\ConsoleSystem4.exe
+C:\Users\Admin\source\repos\ConsoleSystem4\bin\Debug\net10.0\ConsoleSystem4.deps.json
+C:\Users\Admin\source\repos\ConsoleSystem4\bin\Debug\net10.0\ConsoleSystem4.runtimeconfig.json
+C:\Users\Admin\source\repos\ConsoleSystem4\bin\Debug\net10.0\ConsoleSystem4.dll
+C:\Users\Admin\source\repos\ConsoleSystem4\bin\Debug\net10.0\ConsoleSystem4.pdb
+C:\Users\Admin\source\repos\ConsoleSystem4\obj\Debug\net10.0\ConsoleSystem4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\ConsoleSystem4\obj\Debug\net10.0\ConsoleSystem4.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\ConsoleSystem4\obj\Debug\net10.0\ConsoleSystem4.AssemblyInfo.cs
+C:\Users\Admin\source\repos\ConsoleSystem4\obj\Debug\net10.0\ConsoleSystem4.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\ConsoleSystem4\obj\Debug\net10.0\ConsoleSystem4.dll
+C:\Users\Admin\source\repos\ConsoleSystem4\obj\Debug\net10.0\refint\ConsoleSystem4.dll
+C:\Users\Admin\source\repos\ConsoleSystem4\obj\Debug\net10.0\ConsoleSystem4.pdb
+C:\Users\Admin\source\repos\ConsoleSystem4\obj\Debug\net10.0\ConsoleSystem4.genruntimeconfig.cache
+C:\Users\Admin\source\repos\ConsoleSystem4\obj\Debug\net10.0\ref\ConsoleSystem4.dll
