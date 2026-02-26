@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\ConsoleSystem8dz\bin\Debug\net10.0\ConsoleSystem8dz.exe
+C:\Users\Admin\source\repos\ConsoleSystem8dz\bin\Debug\net10.0\ConsoleSystem8dz.deps.json
+C:\Users\Admin\source\repos\ConsoleSystem8dz\bin\Debug\net10.0\ConsoleSystem8dz.runtimeconfig.json
+C:\Users\Admin\source\repos\ConsoleSystem8dz\bin\Debug\net10.0\ConsoleSystem8dz.dll
+C:\Users\Admin\source\repos\ConsoleSystem8dz\bin\Debug\net10.0\ConsoleSystem8dz.pdb
+C:\Users\Admin\source\repos\ConsoleSystem8dz\obj\Debug\net10.0\ConsoleSystem8dz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\ConsoleSystem8dz\obj\Debug\net10.0\ConsoleSystem8dz.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\ConsoleSystem8dz\obj\Debug\net10.0\ConsoleSystem8dz.AssemblyInfo.cs
+C:\Users\Admin\source\repos\ConsoleSystem8dz\obj\Debug\net10.0\ConsoleSystem8dz.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\ConsoleSystem8dz\obj\Debug\net10.0\ConsoleSystem8dz.dll
+C:\Users\Admin\source\repos\ConsoleSystem8dz\obj\Debug\net10.0\refint\ConsoleSystem8dz.dll
+C:\Users\Admin\source\repos\ConsoleSystem8dz\obj\Debug\net10.0\ConsoleSystem8dz.pdb
+C:\Users\Admin\source\repos\ConsoleSystem8dz\obj\Debug\net10.0\ConsoleSystem8dz.genruntimeconfig.cache
+C:\Users\Admin\source\repos\ConsoleSystem8dz\obj\Debug\net10.0\ref\ConsoleSystem8dz.dll
