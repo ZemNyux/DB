@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Client7/Client7.csproj" />
+  <Project Path="ConsoleServer7/ConsoleServer7.csproj" />
+</Solution>

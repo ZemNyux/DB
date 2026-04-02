@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\Server7\Client7\bin\Debug\net10.0\Client7.exe
+C:\Users\Admin\source\repos\Server7\Client7\bin\Debug\net10.0\Client7.deps.json
+C:\Users\Admin\source\repos\Server7\Client7\bin\Debug\net10.0\Client7.runtimeconfig.json
+C:\Users\Admin\source\repos\Server7\Client7\bin\Debug\net10.0\Client7.dll
+C:\Users\Admin\source\repos\Server7\Client7\bin\Debug\net10.0\Client7.pdb
+C:\Users\Admin\source\repos\Server7\Client7\obj\Debug\net10.0\Client7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\Server7\Client7\obj\Debug\net10.0\Client7.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\Server7\Client7\obj\Debug\net10.0\Client7.AssemblyInfo.cs
+C:\Users\Admin\source\repos\Server7\Client7\obj\Debug\net10.0\Client7.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Server7\Client7\obj\Debug\net10.0\Client7.dll
+C:\Users\Admin\source\repos\Server7\Client7\obj\Debug\net10.0\refint\Client7.dll
+C:\Users\Admin\source\repos\Server7\Client7\obj\Debug\net10.0\Client7.pdb
+C:\Users\Admin\source\repos\Server7\Client7\obj\Debug\net10.0\Client7.genruntimeconfig.cache
+C:\Users\Admin\source\repos\Server7\Client7\obj\Debug\net10.0\ref\Client7.dll

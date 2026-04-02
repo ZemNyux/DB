@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\bin\Debug\net10.0\ConsoleServer7.exe
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\bin\Debug\net10.0\ConsoleServer7.deps.json
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\bin\Debug\net10.0\ConsoleServer7.runtimeconfig.json
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\bin\Debug\net10.0\ConsoleServer7.dll
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\bin\Debug\net10.0\ConsoleServer7.pdb
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\obj\Debug\net10.0\ConsoleServer7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\obj\Debug\net10.0\ConsoleServer7.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\obj\Debug\net10.0\ConsoleServer7.AssemblyInfo.cs
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\obj\Debug\net10.0\ConsoleServer7.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\obj\Debug\net10.0\ConsoleServer7.dll
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\obj\Debug\net10.0\refint\ConsoleServer7.dll
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\obj\Debug\net10.0\ConsoleServer7.pdb
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\obj\Debug\net10.0\ConsoleServer7.genruntimeconfig.cache
+C:\Users\Admin\source\repos\Server7\ConsoleServer7\obj\Debug\net10.0\ref\ConsoleServer7.dll
