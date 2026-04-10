@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Client2++/Client2++.vcxproj" />
+  <Project Path="ConsoleServer2++/ConsoleServer2++.vcxproj" />
+</Solution>

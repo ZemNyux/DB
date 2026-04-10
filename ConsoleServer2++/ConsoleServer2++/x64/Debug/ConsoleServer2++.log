@@ -1,0 +1,3 @@
+﻿  ConsoleServer2++.cpp
+C:\Users\Admin\source\repos\ConsoleServer2++\ConsoleServer2++\ConsoleServer2++.cpp(57,69): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  ConsoleServer2++.vcxproj -> C:\Users\Admin\source\repos\ConsoleServer2++\x64\Debug\ConsoleServer2++.exe
