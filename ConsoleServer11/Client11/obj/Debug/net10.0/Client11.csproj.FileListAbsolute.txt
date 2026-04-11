@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\bin\Debug\net10.0\Client11.exe
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\bin\Debug\net10.0\Client11.deps.json
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\bin\Debug\net10.0\Client11.runtimeconfig.json
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\bin\Debug\net10.0\Client11.dll
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\bin\Debug\net10.0\Client11.pdb
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\obj\Debug\net10.0\Client11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\obj\Debug\net10.0\Client11.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\obj\Debug\net10.0\Client11.AssemblyInfo.cs
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\obj\Debug\net10.0\Client11.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\obj\Debug\net10.0\Client11.dll
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\obj\Debug\net10.0\refint\Client11.dll
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\obj\Debug\net10.0\Client11.pdb
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\obj\Debug\net10.0\Client11.genruntimeconfig.cache
+C:\Users\Admin\source\repos\ConsoleServer11\Client11\obj\Debug\net10.0\ref\Client11.dll
